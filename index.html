@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>關於我</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="container">
+<body class="light-theme">
+
+  <!-- 主題切換 -->
+  <button id="themeToggle">切換主題</button>
+
+  <!-- 🔹 首頁內容 (來自 about.txt) -->
+  <section class="intro-section">
+    <img src="me.jpg" alt="我的頭貼" class="me" />
     <h1>關於我</h1>
-    <pre id="about-content">載入中...</pre>
+    <p id="introText">載入中...</p>
+  </section>
+
+  <!-- 🔘 分區按鈕 -->
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-target="basic">基本資料</button>
+    <button class="tab-btn" data-target="education">學經歷</button>
+    <button class="tab-btn" data-target="interests">興趣愛好</button>
   </div>
+
+  <!-- 🔸 基本資料 -->
+  <section id="basic" class="tab-section">
+    <h2>基本資料</h2>
+    <ul>
+      <li>姓名：邵偉傑</li>
+      <li>性別：男性</li>
+      <li>信箱：jackyshao0127@gmail.com</li>
+      <li>居住地：桃園市</li>
+      <li>身高：180公分</li>
+      <li>體重：76公斤</li>
+      <li>血型：A型</li>
+      <li>星座：水瓶座</li>
+      <li>mbti：ENTP</li>
+      
+    </ul>
+  </section>
+
+  <!-- 🔸 學經歷 -->
+  <section id="education" class="tab-section hidden">
+    <h2>學經歷</h2>
+    <ul>
+      <li>國立中興大學 應用數學系</li>
+      <ul>
+        <li>數學與統計</li>
+        <li>市場行銷、經濟學</li>
+      </ul>
+      <li>桃園市立高級中學</li>
+      <ul>
+        <li>第三類組</li>
+        <li>吉他社</li>
+      </ul>
+      <li>桃園市立同德國民中學</li>
+    </ul>
+  </section>
+
+  <!-- 🔸 興趣愛好 -->
+  <section id="interests" class="tab-section hidden">
+    <h2>興趣愛好</h2>
+    <ul>
+      <li>運動</li>
+      <ul>
+        <li>籃球</li>
+        <li>羽球</li>
+        <li>游泳</li>
+        <li>重訓</li>
+      </ul>
+      <li>遊戲</li>
+      <ul>
+        <li>APEX</li>
+        <li>魔物獵人</li>
+        <li>寶可夢系列遊戲</li>
+      </ul>
+      <li>電影</li>
+      <ul>
+        <li>星際效應</li>
+        <li>哈利波特系列電影</li>
+        <li>漫威系列電影</li>
+      </ul>
+    </ul>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>

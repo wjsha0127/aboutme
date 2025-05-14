@@ -1,41 +1,96 @@
-/* 整個網頁的基礎樣式 */
-body {
-  font-family: "Microsoft JhengHei", sans-serif; 
-  /* 設定字型，使用微軟正黑體，若沒有則使用無襯線字型 */
-
-  font-size: 20px;
-  /* 設定文字大小 */
-
-  background-color: #969ce5; 
-  /* 設定整個頁面的背景顏色 */
-
-  color: #4d4c4c; 
-  /* 設定文字顏色 */
-
-  padding: 20px; 
-  /* 內邊框寬度 */
+/* 🌗 主題切換：淺色與深色 */
+body.light-theme {
+  background-color: #ffffff;
+  color: #333;
+}
+body.dark-theme {
+  background-color: #565555;
+  color: #333333;
 }
 
-/* 設定主要內容容器的樣式 */
-.container {
-  max-width: 1000px; 
-  /* 容器的最大寬度 */
+/* 🎨 主題切換按鈕 */
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #5c9ded;
+  color: white;
+  border-radius: 8px;
+}
 
-  height: 400px;
-  /* 設定容器高度 */
+/* 📢 首頁介紹區 */
+.intro-section {
+  max-width: 800px;
+  margin: 40px auto 20px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: rgba(240, 240, 240, 0.9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.intro-section h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
 
-  margin: auto; 
-  /* 左右自動設定邊距，在畫面上水平置中 */
+/* 🔘 分區按鈕 */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
 
-  background: rgb(230, 236, 249); 
-  /* 背景顏色設定 */
+.tab-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  padding: 30px; 
-  /* 內容區內邊框寬度 */
+.tab-btn.active {
+  background-color: #5c9ded;
+  color: white;
+}
 
-  border-radius: 10px; 
-  /* 容器邊角變圓 */
+/* 📦 區塊容器 */
+.tab-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-  /* 加上陰影效果 */
+/* 🔒 隱藏區塊 */
+.hidden {
+  display: none;
+}
+
+/* 📱 RWD：手機樣式 */
+@media screen and (max-width: 600px) {
+  #themeToggle {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.me {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  display: block;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
