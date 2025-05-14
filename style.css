@@ -1,0 +1,41 @@
+/* 整個網頁的基礎樣式 */
+body {
+  font-family: "Microsoft JhengHei", sans-serif; 
+  /* 設定字型，使用微軟正黑體，若沒有則使用無襯線字型 */
+
+  font-size: 20px;
+  /* 設定文字大小 */
+
+  background-color: #969ce5; 
+  /* 設定整個頁面的背景顏色 */
+
+  color: #4d4c4c; 
+  /* 設定文字顏色 */
+
+  padding: 20px; 
+  /* 內邊框寬度 */
+}
+
+/* 設定主要內容容器的樣式 */
+.container {
+  max-width: 1000px; 
+  /* 容器的最大寬度 */
+
+  height: 400px;
+  /* 設定容器高度 */
+
+  margin: auto; 
+  /* 左右自動設定邊距，在畫面上水平置中 */
+
+  background: rgb(230, 236, 249); 
+  /* 背景顏色設定 */
+
+  padding: 30px; 
+  /* 內容區內邊框寬度 */
+
+  border-radius: 10px; 
+  /* 容器邊角變圓 */
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  /* 加上陰影效果 */
+}
